@@ -56,10 +56,9 @@
             val min = 1
             val max = 100
             val num = pedirNum(min,max)
-            val pordiez = Array(10) { i -> i + 1 }
-            for (cosa in pordiez){
-                println("$cosa -> $num x $cosa = ${num*cosa}")
-            }
+            val tabla = Array<String>(11){i -> "$i -> $num x $i = ${num * i }"}
+            tabla.forEach { println(it) }
+
             val pregunta = "¿Quieres generar otra tabla de multiplicar?(s/n): "
             estado = pregunta(pregunta)
         }while (estado)
