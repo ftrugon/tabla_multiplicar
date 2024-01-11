@@ -9,7 +9,8 @@
      */
 
     fun pedirNum(min:Int,max:Int):Int{
-        val porcien = Array(max) { i -> i + min }
+        //val porcien = Array(max) { it + min }
+        val porcien = (min..max).toList()
 
 
         do {
@@ -53,7 +54,7 @@
         do {
             //TODO: Solicitar la introducción de un número entre 1 y 100 y mostrar su table de multiplicar...
             //Hasta que se responda negativamente a la pregunta "¿Desea generar otra tabla de multiplicación? (s/n)"
-            val min = 1
+            val min = 4
             val max = 100
             val num = pedirNum(min,max)
             val tabla = Array<String>(11){i -> "$i -> $num x $i = ${num * i }"}
